@@ -9,9 +9,9 @@ The code mainly contains two parts: solving $\Omega_k$ and Cross-Entropy optimiz
 
 - Solving $\Omega_k$
   
-The calculation of $\Omega_k$ is a typical combinatorial optimization problem (COP), where we can employ the MATLAB parallel toolbox "*Parallel Computing Toolbox*" to solve $\Omega_k$  for certain measurement settings.
+The calculation of $\Omega_k$ is a typical combinatorial optimization problem (COP), where we can employ the MATLAB parallel toolbox "*Parallel Computing Toolbox*" to solve $\Omega_k$  for certain measurement settings via omegak_batching_optimized.m (measurement bases) or omegak_batching_optimized_Bloch.m (Bloch parametrization).
 
 - Cross-Entropy optimization
 
-Finding the optimal measurement settings for $N$-measurement scenario.
+Find the optimal measurement settings for $N$-measurement scenario, where qutrit isotropic and Werner states correspond to crossEntropyOptimizerIsotropic.m and crossEntropyOptimizerWerner.m, respectively.
 
