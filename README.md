@@ -13,5 +13,5 @@ The calculation of $\Omega_k$ is a typical combinatorial optimization problem (C
 
 - Cross-Entropy optimization
 
-Find the optimal measurement settings for $N$-measurement scenario, where qutrit isotropic and Werner states correspond to crossEntropyOptimizerIsotropic.m and crossEntropyOptimizerWerner.m, respectively.
+Try to find the optimal measurement settings for $N$-measurement scenario, where qutrit isotropic and Werner states correspond to crossEntropyOptimizerIsotropic.m and crossEntropyOptimizerWerner.m, respectively.
 
