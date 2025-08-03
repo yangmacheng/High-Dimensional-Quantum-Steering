@@ -3,9 +3,9 @@
 
 This is a repository for code which was written for the article "*Witness the High-Dimensional Quantum Steering via Majorization Lattice*. Ma-Cheng Yang and Cong-Feng Qiao. [arXiv:2507.20950 [quant-ph]](https://arxiv.org/abs/2507.20950)."
 
-All codes are written in MATLAB and requires *Parallel Computing Toolbox*
+All codes are written in MATLAB and requires *Parallel Computing Toolbox*.
 
-The code mainly contains two parts: solving $\Omega_k$ and Cross-Entropy optimization
+The code mainly contains two parts: solving $\Omega_k$ and Cross-Entropy optimization.
 
 - Solving $\Omega_k$
   
