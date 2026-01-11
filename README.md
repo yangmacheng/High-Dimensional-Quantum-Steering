@@ -17,3 +17,14 @@ Try to find the optimal measurement settings for $N$-measurement scenario (cross
 
 - Steering for general scenario (here, we provide a qutrit example) including 
 
+omegak_batching_optimized.m:
+
+### 核心功能
+
+- **[`calculate_steering()`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/omegak_batching_optimized.m)**
+  - 用于计算高维量子导引的核心指标。
+  - 使用了 SDP 半定规划算法。
+
+- **[`plot_result()`](https://github.com/your/repo/blob/main/code.py#L45)**
+  - **功能**：将计算结果可视化。
+  - **注意**：需要安装 `matplotlib` 库。
