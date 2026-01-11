@@ -1,45 +1,79 @@
-# Code for "*[Witness High-Dimensional Quantum Steering via Majorization Lattice](https://arxiv.org/abs/2507.20950)*"
-### Ma-Cheng Yang and Cong-Feng Qiao
+# Code for "Witness High-Dimensional Quantum Steering via Majorization Lattice"
 
-This is a repository for code which was written for the article "*Witness High-Dimensional Quantum Steering via Majorization Lattice*. Ma-Cheng Yang and Cong-Feng Qiao. [arXiv:2507.20950 [quant-ph]](https://arxiv.org/abs/2507.20950)."
+[![arXiv](https://img.shields.io/badge/arXiv-2507.20950-b31b1b.svg)](https://arxiv.org/abs/2507.20950)
+[![Language](https://img.shields.io/badge/Language-MATLAB-orange.svg)](https://www.mathworks.com/products/matlab.html)
 
-All codes are written in MATLAB and requires *Parallel Computing Toolbox*.
+**Authors:** Ma-Cheng Yang and Cong-Feng Qiao
 
-The code mainly contains two parts: solving Cross-Entropy optimization for the optimal settings of qutrit Werner and isotropic states, and steering detection for general scenario.
-  
-#### Cross-Entropy optimization for the optimal settings of qutrit Werner and isotropic states
+This repository contains the source code associated with the research article:
+> **Witness High-Dimensional Quantum Steering via Majorization Lattice**  
+> Ma-Cheng Yang and Cong-Feng Qiao  
+> *arXiv preprint arXiv:2507.20950 [quant-ph]* (2025).  
+> [View on arXiv](https://arxiv.org/abs/2507.20950)
 
-- **[`mub2to8.m`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/mub2to8.mat)**
-  - Datas of mutually unbiased bases with dimension $2$ to $8$
+## 📋 Requirements
 
-- **[`omegak_batching_optimized_bloch()`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/omegak_batching_optimized_Bloch.m)**
-  - Calculate $\Omega_k$, Bloch parametrization employing the cross-entropy optimization
+The codebase is developed in **MATLAB**. To run the parallel optimization scripts efficiently, the following toolbox is required:
 
-- **[`crossEntropyOptimizer()`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/crossEntropyOptimizer.m)**
-  - Find the optimal measurement settings for $N$-measurement scenario for Werner and isotropic states
- 
+- **MATLAB Parallel Computing Toolbox**
+
+## 📂 Repository Structure
+
+The code consists of two main modules:
+
+- **Solving Cross-Entropy Method (CEM) optimization for optimal settings in qutrit Werner and isotropic states**
+
+- **General steering detection for arbitrary quantum states and measurements**
+
+### Cross-Entropy Optimization (Werner & Isotropic States)
+*Focuses on finding optimal measurement settings for N-measurement scenarios.*
+
+- **[`mub2to8.mat`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/mub2to8.mat)**
+  - Mutually Unbiased Bases (MUBs) in dimensions $d=2$ to $8$.
+
+- **[`crossEntropyOptimizer.m`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/crossEntropyOptimizer.m)**
+  - **Core Algorithm**: Finds the optimal measurement settings for Werner and isotropic states using the Cross-Entropy Method.
+
+- **[`omegak_batching_optimized_Bloch.m`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/omegak_batching_optimized_Bloch.m)**
+  - Computes $\Omega_k$ using Bloch parametrization optimized via cross-entropy.
+
 - **[`isotropic_werner_cem_para_script.mlx`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/isotropic_werner_cem_para_script.mlx)**
-  - The script of parameters setting of cross-entropy optimization for Werner and isotropic states
+  - **Live Script**: Configuration and parameter settings for running the optimization on Werner/isotropic states.
 
-#### Steering detection for general scenario
+---
 
-- **[`omegak_batching_optimized()`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/omegak_batching_optimized.m)**
-  - Calculate $\Omega_k$
- 
-- **[`base_array_general_operation()`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/base_array_general_operation.m)**
-  - Perform a generalized transformation (unitary and anti-unitary) on the base vectors
+### General Steering Detection
+*Algorithms for minimizing entropy and detecting steering in general scenarios.*
 
-- **[`calc_quantum_prob_aggregatio()`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/calc_quantum_prob_aggregation.m)**
-  - Calculate quanutm measurement probability distributions after aggregation for a given measurement bases
- 
-- **[`calc_shannon_entropy()`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/calc_shannon_entropy.m)**
-  - Calculate Shannon entropy
+- **[`minimization_entropy.m`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/minimization_entropy.m)**
+  - **Core Algorithm**: Optimizes the alignment between Alice's and Bob's measurements (Unitary/Anti-unitary) to minimize entropy.
 
-- **[`generate_general_operator()`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/generate_general_operator.m)**
-  - Generator general transformation (unitary and anti-unitary) in light of the given parametres
+- **[`omegak_batching_optimized.m`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/omegak_batching_optimized.m)**
+  - Calculates the majorization bound $\Omega_k$.
 
-- **[`minimization_entropy()`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/minimization_entropy.m)**
-  - Find the optimal alignment between Alice's measurement and Bob's one for general quantum states and measurements.
+- **[`calc_quantum_prob_aggregation.m`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/calc_quantum_prob_aggregation.m)**
+  - Computes the aggregated quantum measurement probability distributions for given measurement bases.
+
+- **[`calc_shannon_entropy.m`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/calc_shannon_entropy.m)**
+  - Helper function to calculate Shannon entropy.
+
+- **[`base_array_general_operation.m`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/base_array_general_operation.m)**
+  - Applies generalized transformations (Unitary and Anti-unitary) to the basis vectors.
+
+- **[`generate_general_operator.m`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/generate_general_operator.m)**
+  - Generates specific unitary or anti-unitary operators based on input parameters.
 
 - **[`general_case_script.mlx`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/general_case_script.mlx)**
-  - The script of parameters setting of cross-entropy optimization for general scenario
+  - **Live Script**: Main execution script for the general scenario simulation.
+
+##  citation
+
+If you find this code useful for your research, please cite our paper:
+
+```bibtex
+@article{yang2025witness,
+  title={Witness High-Dimensional Quantum Steering via Majorization Lattice},
+  author={Yang, Ma-Cheng and Qiao, Cong-Feng},
+  journal={arXiv preprint arXiv:2507.20950},
+  year={2025}
+}
