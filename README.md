@@ -25,6 +25,8 @@ The code consists of two main modules:
 
 - **General steering detection for arbitrary quantum states and measurements**
 
+---
+
 ### Cross-Entropy Optimization (Werner & Isotropic States)
 *Focuses on finding optimal measurement settings for N-measurement scenarios.*
 
@@ -40,7 +42,6 @@ The code consists of two main modules:
 - **[`isotropic_werner_cem_para_script.mlx`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/isotropic_werner_cem_para_script.mlx)**
   - **Live Script**: Configuration and parameter settings for running the optimization on Werner/isotropic states.
 
----
 
 ### General Steering Detection
 *Algorithms for minimizing entropy and detecting steering in general scenarios.*
