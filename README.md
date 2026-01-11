@@ -1,4 +1,4 @@
-# Code for "*[Witness the High-Dimensional Quantum Steering via Majorization Lattice](https://arxiv.org/abs/2507.20950)*"
+# Code for "*[Witness High-Dimensional Quantum Steering via Majorization Lattice](https://arxiv.org/abs/2507.20950)*"
 #### Ma-Cheng Yang and Cong-Feng Qiao
 
 This is a repository for code which was written for the article "*Witness the High-Dimensional Quantum Steering via Majorization Lattice*. Ma-Cheng Yang and Cong-Feng Qiao. [arXiv:2507.20950 [quant-ph]](https://arxiv.org/abs/2507.20950)."
