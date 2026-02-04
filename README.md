@@ -67,6 +67,7 @@ The code consists of two main modules:
 - **[`general_case_script.mlx`](https://github.com/yangmacheng/High-Dimensional-Quantum-Steering/blob/main/general_case_script.mlx)**
   - **Live Script**: Main execution script for the general scenario simulation.
 
+<!--
 ##  citation
 
 If you find this code useful for your research, please cite our paper:
@@ -78,3 +79,4 @@ If you find this code useful for your research, please cite our paper:
   journal={arXiv preprint arXiv:2507.20950},
   year={2025}
 }
+-->
